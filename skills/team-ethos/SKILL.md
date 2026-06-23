@@ -62,7 +62,9 @@ concrete than on an abstract plan.
   for sign-off, and don't write a big plan first.
 - **Plan up front only for big tasks** — large scope, many moving parts, or hard to undo.
   There, a written plan reviewed before you build is worth it. The smaller the task, the
-  less planning it needs.
+  less planning it needs. To pressure-test a plan with the LLM before you share it, run the
+  [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
+  skill — a relentless interview that surfaces blind spots and weak assumptions early.
 - Reserve a decision-ask for what stays expensive even when code is cheap: **product/scope
   direction, hard-to-reverse changes** (schema/data migrations, public APIs, client-facing
   commitments), or **anything that blocks teammates**.
