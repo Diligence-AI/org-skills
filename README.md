@@ -13,13 +13,12 @@ working style is the same on every project and client, and nobody has to keep it
 ## Install (every team member, once per machine)
 
 ```bash
-npx skills add Diligence-AI/org-skills --all
+npx skills add Diligence-AI/org-skills
 ```
 
-`--all` installs **every** skill to all your agents with no prompts (it's shorthand for
-`--skill '*' --agent '*' -y`). Drop it if you'd rather pick skills interactively. This drops
-the skills into your agent's skills directory (e.g. `~/.claude/skills/` and `~/.codex/skills/`);
-they work across SKILL.md-compatible agents.
+Pick the skills you want from the list. They install into your agent's skills directory
+(e.g. `~/.claude/skills/` and `~/.codex/skills/`) and work with any SKILL.md-compatible
+agent (Claude Code, Codex, Cursor, …).
 
 ## Prerequisites — connect your MCPs
 
