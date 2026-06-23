@@ -1,4 +1,4 @@
-# Diligence AI — Org Skill
+# Diligence AI — Org Skills
 
 Shared, installable skills that encode **how our team works**. Install once and your
 coding agent (Claude Code, Codex, Cursor, etc.) surfaces the rules automatically — so the
@@ -6,14 +6,14 @@ working style is the same on every project and client, and nobody has to keep it
 
 ## Skills
 
-- **team-ethos** — our operating ethos: board-is-truth (Linear), pull-don't-wait,
+- **how-we-work** — our operating ethos: board-is-truth (Linear), pull-don't-wait,
   flag blockers fast, build cheap & ask only on the big calls, open a PR early,
   test before "ready", concise client-ready comms.
 
 ## Install (every team member, once per machine)
 
 ```bash
-npx skills add Diligence-AI/diligence-ai-org-skill
+npx skills add Diligence-AI/org-skills
 ```
 
 This drops the skills into your agent's skills directory (e.g. `~/.claude/skills/` and
@@ -21,7 +21,7 @@ This drops the skills into your agent's skills directory (e.g. `~/.claude/skills
 
 ## Prerequisites — connect your MCPs
 
-The **team-ethos** skill assumes your agent can reach the tools the workflow runs on. Connect
+The **how-we-work** skill assumes your agent can reach the tools the workflow runs on. Connect
 these MCP servers in your agent (one-time setup per machine), before you start work:
 
 - **Linear MCP** — the live source of truth for all work. Authenticate it and point it at

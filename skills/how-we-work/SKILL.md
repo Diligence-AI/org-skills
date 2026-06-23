@@ -1,5 +1,5 @@
 ---
-name: team-ethos
+name: how-we-work
 description: >-
   The Diligence AI team's operating ethos for how to plan, branch, ship, track
   work in Linear, communicate, and stay unblocked. Use this when starting any

@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code — personal / machine-specific agent config
+# (settings.json here holds local permissions + absolute paths, not shared team config)
+.claude/settings.local.json
+.claude/settings.json
+
+# Keep the rest of .claude/ (shared commands, agents, skills, hooks) committable.
