@@ -1,12 +1,11 @@
 ---
-
 name: team-ethos
 description: >-
-  Diligence AI team operating ethos — how we plan, branch, ship, track work in
-  Linear, communicate, and stay unblocked. Consult at the START of any task and
-  whenever you are blocked, picking your next task, opening a PR, or drafting a
-  message that may reach a client. This is the shared "how we work" manual so no
-  one has to keep it in their head.
+  The Diligence AI team's operating ethos for how to plan, branch, ship, track
+  work in Linear, communicate, and stay unblocked. Use this when starting any
+  task, when blocked, when picking the next task, when opening a PR, when
+  drafting a message that may reach a client, or when planning work — it is the
+  shared "how we work" manual so no one has to keep it in their head.
 ---
 
 # How We Work — Team Ethos
@@ -43,7 +42,7 @@ The Todo list in Linear is prepped ahead of each week. Those tasks are yours to 
 - The moment you finish or get blocked, **pick the next Todo item and keep moving.**
 - You do not need to wait to be assigned work. If it's in Todo, it's fair game.
 - ✅ Blocked on access or a decision? Drop the blocker on the issue, then grab the next
-  Todo and stay productive. Also update the status of the task as Blocker, so it get's the attention it deserves.
+  Todo and stay productive. Also update the status of the task as Blocker, so it gets the attention it deserves.
 - ❌ Sit and wait on a reply while a dozen ready tasks go untouched.
 
 ## 3. Surface blockers fast
