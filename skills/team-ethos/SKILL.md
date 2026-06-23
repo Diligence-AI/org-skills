@@ -74,15 +74,27 @@ concrete than on an abstract plan.
   ❌ a long plan that's slow to read and blocks everyone waiting on it.
 - While you wait on any answer, **pull the next task** (see #2). Don't sit idle.
 
-## 5. Branch & PR hygiene — open a PR early
+## 5. Branch, PR & review — review your own work first
 
 - Branch off `dev` (or the repo default). **One branch per task — docs and code together.**
   Put the doc/plan link on the Linear issue so it all points to one place.
 - **Open a draft PR as soon as the branch exists.** Work sitting in a local branch with no
   PR is invisible — the open PR is what shows the team, on GitHub, which tasks are in flight.
 - Share the **PR link**, never a raw GitHub file or commit URL.
-- Mark a PR **"Ready for review" only after you've tested it yourself.** If you deliberately
-  left something out, say so explicitly and link a tracking issue — don't let review catch it.
+- **Self-review before you ask a human — this is the gate.** Run a thorough review with your
+  coding agent in a **fresh** chat (Claude Code `/code-review`, Codex, or equivalent — your
+  tool, but *fresh context*, not the thread that wrote the code, so it critiques instead of
+  confirming). Resolve every finding and **fix what it surfaces.** Then **self-QA
+  end-to-end** — you are always your own QA; exercise the change the way a user would.
+- **Write a proper PR description**: what changed and why, how you tested it, and what the
+  reviewer should focus on — understandable from the description alone, not reverse-engineered
+  from the diff.
+- **Every PR gets a final human review.** Mark it "Ready" only once the gate above is clean.
+  "Ready" means *"I've grilled it and it works,"* not *"I think it works"* — so human review
+  stays light. If you deliberately left something out, say so and link a tracking issue.
+- **When review requests changes, re-run the whole gate** — fix, self-review again (fresh
+  chat), self-QA again — then get the reviewer's approval. Only then merge. Any code change
+  re-triggers the gate.
 
 ## 6. Communicate concise and client-ready
 
@@ -96,7 +108,7 @@ concrete than on an abstract plan.
 ## The one-line version
 
 > **Board is truth · Pull, don't wait · Flag blockers fast · Build cheap, ask only on the
-> big calls · Open a PR early · Test before "ready" · Speak in bullets.**
+> big calls · Open a PR early · Self-review, QA, then review · Speak in bullets.**
 
 ## Why this exists
 
