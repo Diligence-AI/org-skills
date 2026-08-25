@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Linear Task"
+  short_description: "Create precise, source-faithful Linear tasks"
+  default_prompt: "Create Linear tasks from the supplied facts, preserve source evidence, check for duplicates or related blockers, and report the issue links."

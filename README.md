@@ -9,6 +9,8 @@ working style is the same on every project and client, and nobody has to keep it
 - **how-we-work** — our operating ethos: board-is-truth (Linear), pull-don't-wait,
   flag blockers fast, build cheap & ask only on the big calls, open a PR early,
   test before "ready", concise client-ready comms.
+- **create-linear-task** — creates source-faithful Linear tasks, checks related work, and
+  preserves supplied attachments without adding inferred scope.
 
 ## Install (every team member, once per machine)
 
