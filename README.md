@@ -11,6 +11,8 @@ working style is the same on every project and client, and nobody has to keep it
   test before "ready", concise client-ready comms.
 - **create-linear-task** — creates source-faithful Linear tasks, checks related work, and
   preserves supplied attachments without adding inferred scope.
+- **staging-browser-qa** — verifies a completed feature on its deployed staging commit
+  with agent-browser, captures review evidence, and prepares the human-QA handoff.
 
 ## Install (every team member, once per machine)
 
