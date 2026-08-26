@@ -25,8 +25,9 @@ details, and other repository-specific information out of this shared skill.
 2. Confirm that the staging branch contains the feature and that the exact commit has
    a ready deployment at the configured staging URL.
 3. Stop if the commit, domain, environment, or database may be wrong or production.
-4. Make a focused checklist: changed surfaces, main user flow, one important edge
-   case, and one nearby regression check.
+4. Make a focused checklist only from the issue, accepted clarifications, and feature
+   diff. Test the changed user flows and required edge cases. Do not add a fixed
+   project-wide smoke suite.
 5. Use the configured staging account policy. Never expose credentials, create a
    privileged account, or write directly to a database without explicit approval.
 6. Run the checklist with agent-browser. Take a new snapshot after navigation or a
