@@ -86,6 +86,9 @@ concrete than on an abstract plan.
   tool, but *fresh context*, not the thread that wrote the code, so it critiques instead of
   confirming). Resolve every finding and **fix what it surfaces.** Then **self-QA
   end-to-end** — you are always your own QA; exercise the change the way a user would.
+- When the operator asks for a Claude, Opus, or Fable review, use the
+  **external-code-review** skill so the exact model runs in a fresh, read-only session and
+  the paid review is allowed to finish.
 - **Write a proper PR description**: what changed and why, how you tested it, and what the
   reviewer should focus on — understandable from the description alone, not reverse-engineered
   from the diff.

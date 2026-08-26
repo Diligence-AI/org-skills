@@ -11,6 +11,8 @@ working style is the same on every project and client, and nobody has to keep it
   test before "ready", concise client-ready comms.
 - **create-linear-task** — creates source-faithful Linear tasks, checks related work, and
   preserves supplied attachments without adding inferred scope.
+- **external-code-review** — runs a fresh, read-only Claude review with the requested Opus
+  or Fable model and waits for the paid review to finish.
 - **staging-browser-qa** — verifies a completed feature on its deployed staging commit
   with agent-browser, captures review evidence, and prepares the human-QA handoff.
 
