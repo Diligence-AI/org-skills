@@ -25,6 +25,20 @@ Read `docs/staging-browser-qa.md` in the active repository. If the file or a req
 value is missing, ask the operator. Do not guess. Keep client names, domains, account
 details, and other repository-specific information out of this shared skill.
 
+## Staging account access
+
+Reuse an authorized browser session or an operator-provided account when one is
+available. If neither is available, create a temporary non-privileged account through
+the staging application. Use a synthetic test identity and generate its password
+without printing or committing it. Do not depend on a default seed account because a
+repository might not provide one.
+
+Stop and ask the operator when signup needs an inbox or verification step that the
+agent cannot access, or when the feature needs privileges or existing test data that a
+new account does not have. Never create a privileged account or read password hashes,
+session tokens, or verification tokens from the database. Write directly to a database
+only with explicit operator approval because that bypasses the application workflow.
+
 ## Workflow
 
 1. Read the issue, accepted clarifications, acceptance criteria, and feature diff.
@@ -34,8 +48,7 @@ details, and other repository-specific information out of this shared skill.
 4. Make a focused checklist only from the issue, accepted clarifications, and feature
    diff. Test the changed user flows and required edge cases. Do not add a fixed
    project-wide smoke suite.
-5. Use the configured staging account policy. Never expose credentials, create a
-   privileged account, or write directly to a database without explicit approval.
+5. Use the configured staging account policy and the staging account access rules above.
 6. Run the checklist with agent-browser. Take a new snapshot after navigation or a
    major page update because old element references can become invalid.
 7. Capture useful screenshots. Record a WebM video when a multi-step flow is easier
@@ -46,5 +59,5 @@ details, and other repository-specific information out of this shared skill.
    deploy production or mark human QA complete.
 
 Stop and report a blocker when the feature is not deployed, the deployment is not
-ready, access is missing, the main flow fails, or testing needs an unapproved external
-or database change.
+ready, the permitted account paths cannot provide access, the main flow fails, or
+testing needs an unapproved external or database change.
