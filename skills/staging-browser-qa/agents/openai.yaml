@@ -1,0 +1,4 @@
+interface:
+  display_name: "Staging Browser QA"
+  short_description: "Test deployed features in staging browsers"
+  default_prompt: "Use $staging-browser-qa to verify this feature on staging and prepare QA evidence."
