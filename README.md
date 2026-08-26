@@ -59,7 +59,7 @@ Test these separately before making them default workflow recommendations:
 These do not replace **how-we-work**. Use the org skills for team operating rules, then
 invoke companion skills for a specific work mode.
 
-## Prerequisites — connect your MCPs
+## Prerequisites — connect MCPs and install browser tooling
 
 The **how-we-work** skill assumes your agent can reach the tools the workflow runs on. Connect
 these MCP servers in your agent (one-time setup per machine), before you start work:
@@ -71,6 +71,9 @@ these MCP servers in your agent (one-time setup per machine), before you start w
   PR link). Connect it to the repo host your team uses.
 - **Context7 MCP** — pulls current library/framework docs while you build, so the agent
   works against up-to-date APIs instead of stale training data.
+- **agent-browser CLI** — install it in the environment where the agent runs, such as
+  the remote workspace or container. Installing it only on the operator's computer does
+  not make it available to a remote agent.
 
 For Claude Code, add each server to your MCP config; other agents have their own MCP setup.
 

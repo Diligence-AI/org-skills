@@ -13,6 +13,12 @@ description: >-
 
 Test the changed feature as a user. Treat deployment as a short entry check.
 
+## Runtime requirement
+
+Confirm that the `agent-browser` CLI is installed in the environment where the agent
+runs. If it is unavailable, stop and report the setup blocker. Do not replace browser
+QA with source-code inspection.
+
 ## Repository settings
 
 Read `docs/staging-browser-qa.md` in the active repository. If the file or a required
