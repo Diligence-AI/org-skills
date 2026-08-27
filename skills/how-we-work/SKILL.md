@@ -39,7 +39,9 @@ blockers. Slack is for quick pings and scheduling only.
   - **Active work or self-review:** in progress.
   - **Unblocked, changes requested, or reopened:** Todo or backlog until work resumes;
     then in progress.
-  - **Waiting for another reviewer:** in review; if none exists, keep it in progress.
+  - **Waiting for another reviewer, or a deployed fix that needs final verification:** in
+    review. Add a comment with the evidence and the exact remaining check; if no review
+    status exists, keep it in progress.
   - **Blocked:** blocked; if none exists, keep it in progress and add a blocker comment.
   - **Paused before completion:** backlog or Todo, based on whether it is ready to resume.
   - **Complete:** completed, but only when the issue's scope is done.
