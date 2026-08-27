@@ -61,23 +61,33 @@ Test these separately before making them default workflow recommendations:
 These do not replace **how-we-work**. Use the org skills for team operating rules, then
 invoke companion skills for a specific work mode.
 
-## Prerequisites — connect MCPs and install browser tooling
+## Prerequisites — connect MCPs, authenticate GitHub, and install browser tooling
 
 The **how-we-work** skill assumes your agent can reach the tools the workflow runs on. Connect
-these MCP servers in your agent (one-time setup per machine), before you start work:
+or install these tools in the agent environment (one-time setup per machine), before you start
+work:
 
 - **Linear MCP** — the live source of truth for all work. Authenticate it and point it at
-  the **right project/team**. Without it, status, tasks, and blockers can't flow through the
-  board and the ethos doesn't work — so the skill will ask you to fix it before starting.
-- **GitHub / GitLab MCP** — for branch and PR work (principle #5: open a PR early, share the
-  PR link). Connect it to the repo host your team uses.
+  the **right project/team**. Use its tools directly for issue reads and writes, status
+  changes, comments, and task operations. Do not route Linear work through a generic wrapper
+  CLI or task proxy. Without it, status, tasks, and blockers can't flow through the board and
+  the ethos doesn't work — so the skill will ask you to fix it before starting.
+- **GitHub `gh` CLI** — install and authenticate `gh` in the environment where the agent runs.
+  Confirm access with `gh auth status`, then use `gh` directly for GitHub operations such as
+  draft PR creation and review. Do not use a generic wrapper CLI or task proxy. The
+  authenticated account's existing repository permissions are the boundary; do not bypass
+  access controls.
+- **GitLab (only for GitLab repositories)** — if the repository uses GitLab, connect its
+  configured authenticated GitLab tooling for PR operations. GitHub repositories do not
+  require GitLab setup.
 - **Context7 MCP** — pulls current library/framework docs while you build, so the agent
   works against up-to-date APIs instead of stale training data.
 - **agent-browser CLI** — install it in the environment where the agent runs, such as
   the remote workspace or container. Installing it only on the operator's computer does
   not make it available to a remote agent.
 
-For Claude Code, add each server to your MCP config; other agents have their own MCP setup.
+For Claude Code, add the MCP servers to your MCP config and install/authenticate `gh`; other
+agents have their own MCP and CLI setup.
 
 ## Updating
 

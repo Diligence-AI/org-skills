@@ -14,10 +14,14 @@ This is our shared operating manual. Follow it on every task so the working styl
 consistent across the team and nobody has to remember it from memory. It is short on
 purpose. Six principles.
 
-> **Prerequisite.** This workflow runs on connected MCPs — **Linear** (source of truth),
-> **GitHub/GitLab** (PRs), and **Context7** (current docs). At the start of a task, confirm
-> Linear is connected and pointed at the right project/team — if it isn't, **flag it and
-> don't start working blind**. Setup for all three is in the README.
+> **Prerequisite.** This workflow uses **Linear MCP tools directly** for Linear reads and
+> writes, authenticated **`gh` directly** for GitHub operations, and **Context7** for current
+> docs. If the repository uses GitLab, use its configured authenticated GitLab tooling for
+> GitLab operations. At the start of a task, confirm Linear is connected and pointed at the
+> right project/team, and confirm `gh auth status` succeeds for GitHub work — if required
+> access is missing, **flag it and don't start working blind**. Direct tool use does not grant
+> extra authority: use only existing account, team, and repository permissions. Do not route
+> Linear or GitHub work through a generic wrapper CLI or task proxy. Setup is in the README.
 
 ---
 
@@ -90,8 +94,10 @@ concrete than on an abstract plan.
 
 - Branch off `dev` (or the repo default). **One branch per task — docs and code together.**
   Put the doc/plan link on the Linear issue so it all points to one place.
-- **Open a draft PR as soon as the branch exists.** Work sitting in a local branch with no
-  PR is invisible — the open PR is what shows the team, on GitHub, which tasks are in flight.
+- **Open a draft PR with authenticated `gh` as soon as the branch exists.** Work sitting in a
+  local branch with no PR is invisible — the open PR is what shows the team, on GitHub, which
+  tasks are in flight. If the repository uses GitLab, use its configured authenticated GitLab
+  tooling instead.
 - Share the **PR link**, never a raw GitHub file or commit URL.
 - **Self-review before you ask a human — this is the gate.** Run a thorough review with your
   coding agent in a **fresh** chat (Claude Code `/code-review`, Codex, or equivalent — your
