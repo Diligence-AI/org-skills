@@ -6,15 +6,40 @@ working style is the same on every project and client, and nobody has to keep it
 
 ## Skills
 
-- **how-we-work** — our operating ethos: board-is-truth (Linear), pull-don't-wait,
-  flag blockers fast, build cheap & ask only on the big calls, open a PR early,
-  test before "ready", concise client-ready comms.
+### Index
+
+- **how-we-work** — the lightweight index for the focused Diligence workflow skills.
+
+### Work tracking
+
+- **linear-workflow** — keeps existing Linear work, blockers, review state, and next-task
+  selection accurate.
 - **create-linear-task** — creates source-faithful Linear tasks, checks related work, and
   preserves supplied attachments without adding inferred scope.
+
+### Delivery
+
+- **task-execution** — guides when to build, plan, request a decision, or switch tasks.
+- **pull-request-workflow** — covers branches, PRs, self-review, QA, human review, and
+  merge readiness.
 - **external-code-review** — runs a fresh, read-only Claude review with the requested Opus
   or Fable model and waits for the paid review to finish.
 - **staging-browser-qa** — verifies a completed feature on its deployed staging commit
   with agent-browser, captures review evidence, and prepares the human-QA handoff.
+
+### Client communication
+
+- **client-communication** — drafts concise client status, blocker, handoff, and decision
+  messages.
+- **client-changelog** — writes short, plain-language client changelog entries while
+  keeping technical and proprietary details private.
+
+### Skill maintenance
+
+- **org-skill-authoring** — creates and publishes org skills, keeps their PRs ready for
+  review, and applies merged skills to the authoring environment.
+- **writing-skills** — guides skill descriptions, progressive disclosure, structure,
+  testing, and review.
 
 ## Install (every team member, once per machine)
 
@@ -58,14 +83,13 @@ Test these separately before making them default workflow recommendations:
 - **tdd** — drive implementation through tests when behavior needs to stay tight.
 - **teach** — explain a concept or workflow inside the current workspace.
 
-These do not replace **how-we-work**. Use the org skills for team operating rules, then
-invoke companion skills for a specific work mode.
+These do not replace the focused org workflow skills. Use **how-we-work** to select the
+right org skill, then invoke companion skills for a specific work mode.
 
 ## Prerequisites — connect MCPs, authenticate GitHub, and install browser tooling
 
-The **how-we-work** skill assumes your agent can reach the tools the workflow runs on. Connect
-or install these tools in the agent environment (one-time setup per machine), before you start
-work:
+The org workflow skills assume your agent can reach the tools they use. Connect or install
+these tools in the agent environment (one-time setup per machine) before you start work:
 
 - **Linear MCP** — the live source of truth for all work. Authenticate it and point it at
   the **right project/team**. Use its tools directly for issue reads and writes, status
