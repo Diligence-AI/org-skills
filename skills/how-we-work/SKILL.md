@@ -34,6 +34,17 @@ blockers. Slack is for quick pings and scheduling only.
 - We do **not** post daily progress write-ups, and you don't owe an end-of-day note —
   **we infer status from the board.** That only works if the board actually reflects
   reality. So make sure Linear is updated at all time. We judge output, not hours online.
+- Whenever work is tied to a Linear issue, update its status as soon as the real work state
+  changes. Match the team's status category before its name, because workflows differ:
+  - **Active work or self-review:** in progress.
+  - **Unblocked, changes requested, or reopened:** Todo or backlog until work resumes;
+    then in progress.
+  - **Waiting for another reviewer:** in review; if none exists, keep it in progress.
+  - **Blocked:** blocked; if none exists, keep it in progress and add a blocker comment.
+  - **Paused before completion:** backlog or Todo, based on whether it is ready to resume.
+  - **Complete:** completed, but only when the issue's scope is done.
+  - **Canceled:** canceled, never completed.
+  Accurate transitions keep the board useful and make handoffs clear.
 
 ## 2. Never wait idle — pull the next task
 
@@ -42,7 +53,8 @@ The Todo list in Linear is prepped ahead of each week. Those tasks are yours to 
 - The moment you finish or get blocked, **pick the next Todo item and keep moving.**
 - You do not need to wait to be assigned work. If it's in Todo, it's fair game.
 - ✅ Blocked on access or a decision? Drop the blocker on the issue, then grab the next
-  Todo and stay productive. Also update the status of the task as Blocker, so it gets the attention it deserves.
+  Todo and stay productive. Also use the team's blocked status, or keep the issue in progress
+  if none exists, so the blocker comment gets the attention it deserves.
 - ❌ Sit and wait on a reply while a dozen ready tasks go untouched.
 
 ## 3. Surface blockers fast
