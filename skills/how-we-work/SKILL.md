@@ -1,140 +1,59 @@
 ---
 name: how-we-work
 description: >-
-  The Diligence AI team's operating ethos for how to plan, branch, ship, track
-  work in Linear, communicate, and stay unblocked. Use this when starting any
-  task, when blocked, when picking the next task, when opening a PR, when
-  drafting a message that may reach a client, or when planning work — it is the
-  shared "how we work" manual so no one has to keep it in their head.
+  Routes Diligence AI work to focused org skills for Linear workflow, task
+  execution, pull-request delivery, client communication, changelogs, or org-skill
+  authoring. Use at the start of a task, when blocked, or when unsure which team
+  workflow applies. This is the lightweight index, not each full procedure.
 ---
 
-# How We Work — Team Ethos
+# How We Work
 
-This is our shared operating manual. Follow it on every task so the working style is
-consistent across the team and nobody has to remember it from memory. It is short on
-purpose. Six principles.
+Use this skill as an index. Read only the linked skill needed for the current action;
+do not load every workflow by default.
 
-> **Prerequisite.** This workflow uses **Linear MCP tools directly** for Linear reads and
-> writes, authenticated **`gh` directly** for GitHub operations, and **Context7** for current
-> docs. If the repository uses GitLab, use its configured authenticated GitLab tooling for
-> GitLab operations. At the start of a task, confirm Linear is connected and pointed at the
-> right project/team, and confirm `gh auth status` succeeds for GitHub work — if required
-> access is missing, **flag it and don't start working blind**. Direct tool use does not grant
-> extra authority: use only existing account, team, and repository permissions. Do not route
-> Linear or GitHub work through a generic wrapper CLI or task proxy. Setup is in the README.
+## Work tracking
 
----
+- Starting, resuming, updating, blocking, or completing work tied to Linear: read
+  [linear-workflow](../linear-workflow/SKILL.md).
+- Creating a new Linear issue: read
+  [create-linear-task](../create-linear-task/SKILL.md).
 
-## 1. The board is the source of truth — keep Linear current
+## Delivery
 
-Linear holds the truth about every task: its status, the discussion, the decisions, the
-blockers. Slack is for quick pings and scheduling only.
+- Deciding whether to plan, build, ask for a decision, or move to other work: read
+  [task-execution](../task-execution/SKILL.md).
+- Creating a branch or PR, reviewing, testing, marking ready, or merging: read
+  [pull-request-workflow](../pull-request-workflow/SKILL.md).
+- Running an independent Claude review: read
+  [external-code-review](../external-code-review/SKILL.md).
+- Verifying a completed feature in staging: read
+  [staging-browser-qa](../staging-browser-qa/SKILL.md).
 
-- Keep **all task discussion on the Linear issue** — questions, findings, decisions,
-  blockers. ❌ Don't bury it in a Slack DM or thread; it gets lost and is painful to dig
-  up later.
-- Linear is what we optimize for. Keep the issue's **status and details constantly
-  current**, so anyone can see where things stand **without having to ask you**.
-- We do **not** post daily progress write-ups, and you don't owe an end-of-day note —
-  **we infer status from the board.** That only works if the board actually reflects
-  reality. So make sure Linear is updated at all time. We judge output, not hours online.
-- Whenever work is tied to a Linear issue, update its status as soon as the real work state
-  changes. Match the team's status category before its name, because workflows differ:
-  - **Active work or self-review:** in progress.
-  - **Unblocked, changes requested, or reopened:** Todo or backlog until work resumes;
-    then in progress.
-  - **Waiting for another reviewer, or a deployed fix that needs final verification:** in
-    review. Add a comment with the evidence and the exact remaining check; if no review
-    status exists, keep it in progress.
-  - **Blocked:** blocked; if none exists, keep it in progress and add a blocker comment.
-  - **Paused before completion:** backlog or Todo, based on whether it is ready to resume.
-  - **Complete:** completed, but only when the issue's scope is done.
-  - **Canceled:** canceled, never completed.
-  Accurate transitions keep the board useful and make handoffs clear.
+## Client communication
 
-## 2. Never wait idle — pull the next task
+- Drafting a client message, status update, blocker, or recommendation: read
+  [client-communication](../client-communication/SKILL.md).
+- Writing a client changelog entry, release note, or short fix summary: read
+  [client-changelog](../client-changelog/SKILL.md).
 
-The Todo list in Linear is prepped ahead of each week. Those tasks are yours to pull.
+## Skill maintenance
 
-- The moment you finish or get blocked, **pick the next Todo item and keep moving.**
-- You do not need to wait to be assigned work. If it's in Todo, it's fair game.
-- ✅ Blocked on access or a decision? Drop the blocker on the issue, then grab the next
-  Todo and stay productive. Also use the team's blocked status, or keep the issue in progress
-  if none exists, so the blocker comment gets the attention it deserves.
-- ❌ Sit and wait on a reply while a dozen ready tasks go untouched.
+- Creating or updating a Diligence org skill: read
+  [org-skill-authoring](../org-skill-authoring/SKILL.md).
+- Authoring, reviewing, or debugging any `SKILL.md`: read
+  [writing-skills](../writing-skills/SKILL.md).
 
-## 3. Surface blockers fast
+If one task spans more than one category, read each relevant skill when that part of the
+work starts.
 
-- If something will cost more than ~30 minutes of waiting, raise it **now** — as a comment
-  on the issue, tagging whoever can unblock it. Then switch tasks (see #2).
-- ❌ Absorb a blocker silently for hours. ✅ Flag it in minutes and move on.
+## Shared tool boundary
 
-## 4. Don't stall on planning — build the cheap thing, ask only on the expensive calls
+Use Linear MCP tools directly for Linear work and authenticated `gh` directly for GitHub
+work. Use the configured authenticated GitLab tooling for a GitLab repository. Use Context7
+for current library and framework documentation. Do not route these operations through a
+generic wrapper CLI or task proxy. Existing account, team, repository, and task authority
+remain the limit.
 
-Code is cheap to write _and_ rewrite, especially with AI. A working thin slice usually
-beats a planning round-trip: it's faster, and people give a sharper decision on something
-concrete than on an abstract plan.
-
-- For **reversible, low-stakes** work, just build a small version and show it. Don't wait
-  for sign-off, and don't write a big plan first.
-- **Plan up front only for big tasks** — large scope, many moving parts, or hard to undo.
-  There, a written plan reviewed before you build is worth it. The smaller the task, the
-  less planning it needs. To pressure-test a plan with the LLM before you share it, run the
-  installed [grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md)
-  companion skill, or its [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
-  shortcut, to surface blind spots and weak assumptions early.
-- Reserve a decision-ask for what stays expensive even when code is cheap: **product/scope
-  direction, hard-to-reverse changes** (schema/data migrations, public APIs, client-facing
-  commitments), or **anything that blocks teammates**.
-- When you do need a call, make it **1–3 high-level bullets with your recommendation** —
-  short enough to approve in seconds.
-  ✅ "For v1 I'd go with simple tracking over full fulfillment automation because X — confirm?"
-  ❌ a long plan that's slow to read and blocks everyone waiting on it.
-- While you wait on any answer, **pull the next task** (see #2). Don't sit idle.
-
-## 5. Branch, PR & review — review your own work first
-
-- Branch off `dev` (or the repo default). **One branch per task — docs and code together.**
-  Put the doc/plan link on the Linear issue so it all points to one place.
-- **Open a draft PR with authenticated `gh` as soon as the branch exists.** Work sitting in a
-  local branch with no PR is invisible — the open PR is what shows the team, on GitHub, which
-  tasks are in flight. If the repository uses GitLab, use its configured authenticated GitLab
-  tooling instead.
-- Share the **PR link**, never a raw GitHub file or commit URL.
-- **Self-review before you ask a human — this is the gate.** Run a thorough review with your
-  coding agent in a **fresh** chat (Claude Code `/code-review`, Codex, or equivalent — your
-  tool, but *fresh context*, not the thread that wrote the code, so it critiques instead of
-  confirming). Resolve every finding and **fix what it surfaces.** Then **self-QA
-  end-to-end** — you are always your own QA; exercise the change the way a user would.
-- When the operator asks for a Claude, Opus, or Fable review, use the
-  **external-code-review** skill so the exact model runs in a fresh, read-only session and
-  the paid review is allowed to finish.
-- **Write a proper PR description**: what changed and why, how you tested it, and what the
-  reviewer should focus on — understandable from the description alone, not reverse-engineered
-  from the diff.
-- **Every PR gets a final human review.** Mark it "Ready" only once the gate above is clean.
-  "Ready" means *"I've grilled it and it works,"* not *"I think it works"* — so human review
-  stays light. If you deliberately left something out, say so and link a tracking issue.
-- **When review requests changes, re-run the whole gate** — fix, self-review again (fresh
-  chat), self-QA again — then get the reviewer's approval. Only then merge. Any code change
-  re-triggers the gate.
-
-## 6. Communicate concise and client-ready
-
-- Anything that might reach a client: **1–3 bullets, plain language, with your recommendation.**
-  No raw technical dumps.
-- If you can't compress it, that's the signal you haven't yet decided what matters. Decide
-  first, then send.
-
----
-
-## The one-line version
-
-> **Board is truth · Pull, don't wait · Flag blockers fast · Build cheap, ask only on the
-> big calls · Open a PR early · Self-review, QA, then review · Speak in bullets.**
-
-## Why this exists
-
-These are the same few things we kept repeating across projects. Putting them here means
-they live in one place the agent surfaces automatically — so the working style is the same
-for everyone, on every project and client, without anyone having to hold it in their head.
+> **Board is truth · Act on reversible work · Surface blockers fast · Verify before review ·
+> Communicate plainly.**
