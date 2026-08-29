@@ -41,6 +41,18 @@ working style is the same on every project and client, and nobody has to keep it
 - **writing-skills** — guides skill descriptions, progressive disclosure, structure,
   testing, and review.
 
+## Promotion review bar
+
+Skills in this repo are the team SOP. A change lands only after one teammate reviews it
+against three questions:
+
+1. **Useful beyond one project?** A lesson true only for one client repo stays in that repo.
+2. **Safe to share?** No credentials, no client names or private details, no raw chat.
+3. **Do we want everyone working this way?** The SOP changes slowly and deliberately.
+
+All three yes → merge. Anything else → it stays local (repo skill or personal layer).
+Automated jobs may open draft PRs proposing skills; they never merge — a human always does.
+
 ## Install (every team member, once per machine)
 
 Install the Diligence org skills:
