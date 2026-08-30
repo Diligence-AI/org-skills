@@ -13,6 +13,11 @@ Confirm `gh auth status`, then use authenticated `gh` directly for GitHub operat
 GitLab, use its configured authenticated tooling. Existing repository permissions and the
 operator's task authority remain the limit.
 
+Before branch or PR work, check whether the active task has a Linear issue. If it does, use
+[linear-workflow](../linear-workflow/SKILL.md) to keep its status current. Link the PR after
+it opens, and record QA evidence before merge. Do not pass a checkpoint while tracked work is
+disconnected from its issue, because Linear will otherwise show stale work.
+
 1. Branch from `dev` or the repository default. Keep code and its task documentation on one
    branch, and link the plan or task document from the Linear issue when one exists.
 2. Open a draft PR as soon as the branch has a change that GitHub or GitLab can compare. Link
