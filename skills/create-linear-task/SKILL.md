@@ -21,8 +21,10 @@ description: >-
    estimate, deadline, labels, technical design, or inferred scope unless requested.
 5. Link a new issue to an existing issue only when the source or Linear data supports the
    relation. Preserve the existing issue; do not change its state or content unless asked.
-6. Upload each supplied file to the matching issue. Use the original file when available,
-   and verify that the attachment is present.
+6. Upload each supplied file to the matching issue. Use the original file when available.
+   A pasted screenshot has no path on disk; recover it from the session transcript rather
+   than reporting it as missing. Read [references/attachments.md](references/attachments.md)
+   for how to find the file, the three-step Linear upload, and the signed-header rules.
 7. Re-read each created issue. Confirm its project, title, description, relations, and
    attachments against the source.
 8. Return each identifier and link. State any existing duplicate or blocker that affected
