@@ -36,22 +36,34 @@ working style is the same on every project and client, and nobody has to keep it
 
 ### Skill maintenance
 
-- **org-skill-authoring** — creates and publishes org skills, keeps their PRs ready for
-  review, and applies merged skills to the authoring environment.
+- **org-skill-authoring** — creates org skills, pushes them to `main`, and applies them to
+  the authoring environment.
 - **writing-skills** — guides skill descriptions, progressive disclosure, structure,
   testing, and review.
 
-## Promotion review bar
+## Promotion bar
 
-Skills in this repo are the team SOP. A change lands only after one teammate reviews it
-against three questions:
+Skills in this repo are the team SOP. Answer three questions before a change lands:
 
 1. **Useful beyond one project?** A lesson true only for one client repo stays in that repo.
 2. **Safe to share?** No credentials, no client names or private details, no raw chat.
 3. **Do we want everyone working this way?** The SOP changes slowly and deliberately.
 
-All three yes → merge. Anything else → it stays local (repo skill or personal layer).
-Automated jobs may open draft PRs proposing skills; they never merge — a human always does.
+All three yes → it lands. Anything else → it stays local (repo skill or personal layer).
+
+Commit and push changes to `main` directly. There is no pull request step and no reviewer.
+The author applies the bar above.
+
+This repo has no CI, and `main` is not protected, so nothing else will catch a mistake.
+Two habits carry the whole weight:
+
+- **Keep each commit to one change**, so `git revert` is a clean undo.
+- **Check a changed skill before you push it.** Valid frontmatter with `name` and
+  `description`; every reference link points at a file that exists; any script in a
+  reference file runs as written.
+
+Teammates install with `npx skills add`, so a change on `main` reaches their machines on
+their next install. Treat a push as a release.
 
 ## Install (every team member, once per machine)
 
