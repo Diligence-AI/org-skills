@@ -73,12 +73,25 @@ Install the Diligence org skills:
 npx skills@latest add Diligence-AI/org-skills
 ```
 
-Also install the recommended grill companion skills from
-[Matt Pocock's skill library](https://github.com/mattpocock/skills):
+Also install the companion skills from
+[Matt Pocock's skill library](https://github.com/mattpocock/skills). Pick **one** channel;
+installing both leaves you with every companion skill twice.
+
+On Claude Code, install the managed plugin. It carries all of the promoted skills and updates
+when upstream ships:
 
 ```bash
-npx skills@latest add mattpocock/skills --skill grilling grill-me grill-with-docs -y
+claude plugins install mattpocock-skills
 ```
+
+On Codex or any other SKILL.md agent, copy the skills we use into the repo:
+
+```bash
+npx skills@latest add mattpocock/skills --skill grilling grill-me grill-with-docs domain-modeling wayfinder -y
+```
+
+`grill-with-docs` calls `grilling` and `domain-modeling` through the Skill tool, so leaving
+`domain-modeling` out gives you the interview with no glossary or ADRs.
 
 These install into your agent's skills directory (e.g. `~/.claude/skills/` and
 `~/.codex/skills/`) and work with any SKILL.md-compatible agent (Claude Code, Codex,
@@ -91,17 +104,32 @@ modes that help teammates pressure-test plans and explore design options.
 
 Start with the grill skills:
 
-- **[grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md)**,
-  with **[grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)**
-  as its short pointer, plus
-  **[grill-with-docs](https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md)**,
-  to pressure-test a plan or design before building; use the docs variant when ADRs or
-  glossary entries should be captured.
+- **[grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md)**
+  is the interview itself: it works a design tree in rounds, asks every question it can answer
+  now, and attaches a recommended answer to each. Facts are the agent's job; decisions are
+  yours.
+- **[grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)**
+  is the short pointer to it. Use it when there is no working directory.
+- **[grill-with-docs](https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md)**
+  runs the same interview and adds
+  **[domain-modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md)**,
+  which writes each agreed term to `CONTEXT.md` and each hard-to-reverse decision to an ADR as
+  they land. Prefer it inside a repository: it leaves the paper trail the next session reads.
+
+Then, for an effort too large to plan in one session:
+
+- **[wayfinder](https://github.com/mattpocock/skills/blob/main/skills/engineering/wayfinder/SKILL.md)**
+  charts a map of decision tickets on the issue tracker and resolves one per session, until the
+  route to the goal is clear. It plans; it does not build, so hand its result to `to-spec` or
+  straight to our delivery skills. It reads `docs/agents/issue-tracker.md`, so run
+  `/setup-matt-pocock-skills` once per repository first and point it at Linear. Reach for it
+  only when the route is genuinely not visible yet; a well-scoped feature wants
+  `grill-with-docs` in one session instead.
 
 Test these separately before making them default workflow recommendations:
 
-- **decision-mapping** — turn a vague request into sequenced investigation tickets.
-- **design-an-interface** — compare multiple API/module shapes before committing.
+- **codebase-design** — shared vocabulary for deep modules, and a design-it-twice pass that
+  compares several interface shapes before committing.
 - **handoff** — compact context so another teammate can continue cleanly.
 - **improve-codebase-architecture** — scan a codebase for structural improvement options.
 - **tdd** — drive implementation through tests when behavior needs to stay tight.
@@ -144,4 +172,5 @@ latest. One edit propagates to everyone.
 
 ## Onboarding
 
-Add both install commands above to the new-hire checklist. That's the whole setup.
+Add the org-skills install plus one companion channel to the new-hire checklist. That's the
+whole setup.
