@@ -2,9 +2,10 @@
 name: how-we-work
 description: >-
   Routes Diligence AI work to focused org skills for Linear workflow, task
-  execution, pull-request delivery, client communication, changelogs, or org-skill
-  authoring. Use at the start of a task, when blocked, or when unsure which team
-  workflow applies. This is the lightweight index, not each full procedure.
+  execution, pull-request delivery, client communication, changelogs, org-skill
+  authoring, or the grilling and wayfinder working modes. Use at the start of a task,
+  when blocked, or when unsure which team workflow applies. This is the lightweight
+  index, not each full procedure.
 ---
 
 # How We Work
@@ -18,6 +19,25 @@ do not load every workflow by default.
   [linear-workflow](../linear-workflow/SKILL.md).
 - Creating a new Linear issue: read
   [create-linear-task](../create-linear-task/SKILL.md).
+
+## Working modes
+
+Companion skills from [Matt Pocock's library](https://github.com/mattpocock/skills), not org
+skills. Install them separately (see the org-skills README). When they are installed as the
+Claude Code plugin, prefix each name with `mattpocock-skills:`.
+
+- Pressure-testing a plan, design, or scope before building: run `/grill-with-docs` inside a
+  repository, or `/grill-me` when there is no working directory. The docs variant writes each
+  agreed term to `CONTEXT.md` and each hard-to-reverse decision to an ADR, so the next session
+  reads the vocabulary instead of re-deriving it.
+- Planning an effort too large for one session, where the route to the goal is not yet visible:
+  run `/wayfinder`. It charts decision tickets on the issue tracker and resolves one per
+  session. It produces decisions, not code, so hand off to the delivery skills below once the
+  route is clear. It reads `docs/agents/issue-tracker.md`, so run
+  `/setup-matt-pocock-skills` once per repository first and point it at Linear; without that
+  file wayfinder stops and asks for it.
+
+Reach for a working mode before the delivery skills, not instead of them.
 
 ## Delivery
 
