@@ -2,9 +2,11 @@
 name: linear-workflow
 description: >-
   Keeps existing Linear work accurate while it moves from Todo through active
-  work, review, blockers, and completion. Use when starting or resuming a Linear
-  issue, changing its status, posting findings or blockers, or choosing the next
-  ready task. Do not use to create a new issue; use create-linear-task instead.
+  work, review, blockers, and completion, and sets how to write about Linear work
+  for a person. Use when starting or resuming a Linear issue, changing its status,
+  posting findings or blockers, choosing the next ready task, or writing a
+  summary, triage list, plan, or status update about Linear issues for a human
+  reader. Do not use to create a new issue; use create-linear-task instead.
 ---
 
 # Linear Workflow
@@ -29,6 +31,17 @@ team, and issue before a write, and do not change unrelated issues.
   - Canceled work: canceled, never completed.
 
 When work enters review, add the evidence and the exact remaining check to the issue.
+
+## Name the work, not the number
+
+An identifier is easy for a tool to read and hard for a person to remember. When you write
+to a person about Linear work, say what the issue is in plain words first. Put the
+identifier after those words, and only where the reader needs it to open the issue, such as
+a handover, a decision list, or a question about one issue. Do not start a sentence, a
+bullet, or a table row with a bare identifier. Do not let an identifier replace the
+description of the work.
+
+Keep identifiers inside Linear. Issue descriptions, comments, and relations need them.
 
 ## Do not wait idle
 

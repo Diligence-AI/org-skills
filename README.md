@@ -13,7 +13,7 @@ working style is the same on every project and client, and nobody has to keep it
 ### Work tracking
 
 - **linear-workflow** — keeps existing Linear work, blockers, review state, and next-task
-  selection accurate.
+  selection accurate, and names issues in plain words when writing for a person.
 - **create-linear-task** — creates source-faithful Linear tasks, checks related work, and
   preserves supplied attachments without adding inferred scope.
 

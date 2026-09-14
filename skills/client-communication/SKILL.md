@@ -14,6 +14,8 @@ Write one to three short bullets in plain language.
 - Lead with the client impact or current result.
 - Give a recommendation or next action when the message needs a decision.
 - Include only technical detail that the client needs to understand the impact or action.
+- Name the work in plain words. Add a Linear identifier only when the reader needs it to
+  open the issue.
 - Keep client, account, credential, and internal project details private unless the user
   supplied them for this message and their use is clearly authorized.
 - Make only claims supported by the available evidence.
