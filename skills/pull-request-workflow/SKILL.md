@@ -26,7 +26,10 @@ disconnected from its issue, because Linear will otherwise show stale work.
 4. Before asking for human review, run a thorough self-review in fresh agent context. Resolve
    each valid finding, then test the change end to end in the way a user will use it.
 5. Write a PR description that explains what changed, why, how it was tested, and what needs
-   reviewer attention. State any deliberate omission and link its tracking issue.
+   reviewer attention. State any deliberate omission and link its tracking issue. Review
+   findings, test output, root-cause analysis, and the implementation plan live here or in a
+   branch document. Never paste them into the Linear issue; that issue carries one line and
+   this link.
 6. Mark the PR ready only after self-review and QA pass. Every PR needs final human review.
 7. Any code change after the review gate repeats the gate: self-review, QA, and human
    approval must pass again before merge.

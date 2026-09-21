@@ -18,7 +18,9 @@ description: >-
    Inspect plausible matches before writing.
 4. Create one issue per requested unit of work. Use a direct title and a compact description
    that contains only supplied facts. Do not add acceptance criteria, assignee, estimate,
-   labels, technical design, or inferred scope.
+   labels, technical design, or inferred scope. Keep implementation out: no plan, no phase or
+   batch table, no long checklist. Those belong in a document in the repository or in the
+   pull request, and the issue links them.
 5. Set priority and due date from the words of the source. Read the urgency the source
    states; never invent urgency it does not state, and never leave a stated one unset.
    Take the strongest signal present:
