@@ -17,29 +17,18 @@ not change unrelated issues.
 ## What Linear is for
 
 Linear holds the state of a commitment: what the team agreed to do, who owns it, and where it
-stands. It is a ledger, not a workspace and not a document store.
+stands. It is a ledger, not a workspace.
 
-Before any write, ask one question: does this change what someone does next, or who owns it?
-If it does not, it does not belong in Linear. Three checks when that is unclear:
-
-- **One breath.** If you can say it in one breath, it is a comment. If it needs a screen
-  share, it is a document, and the comment carries the link.
-- **Survival.** If the text stops being true when the branch merges, keep it on the branch.
-- **The stranger.** In six months, does a person who did not do the work need this to act?
-
-The rest has a better home. How a change was made and reviewed belongs on the pull request.
-Why a durable decision was made belongs in a document in the repository. A working note
-belongs on the branch, or nowhere.
+Before any write, ask: does this change what someone does next, or who owns it? If not, it
+does not belong in Linear. How a change was made belongs on the pull request; why a durable
+decision was made belongs in a repository document; a working note stops at the branch.
 
 ## Keep the issue current
 
-- A comment is a decision, a pointer, a supplied fact, or a blocker, and it runs to about
-  four lines: the decision and its reason; or a branch, pull-request, or document link with
-  one line of state; or the client's own words; or what blocks the work and who can clear it.
-- Never paste review findings, test counts, root-cause reports, implementation plans, phase
-  tables, or long checklists into an issue. Put them where the work is, and link them.
-- Write it once. Do not repost the same text on a later visit, and do not send one note to
-  many issues. When one change affects a group, say it once on the parent.
+- A comment is a decision, a pointer, a supplied fact, or a blocker, in about four lines.
+  Never paste review findings, test counts, root-cause reports, plans, phase tables, or long
+  checklists into an issue: put them where the work is and link them.
+- Write it once. Do not repost the same text later, and do not send one note to many issues.
 - Use chat tools only for short notifications, because issue history must stay easy to find.
 - Update status when the real work state changes. Do not rely on daily progress reports to
   correct a stale board.
