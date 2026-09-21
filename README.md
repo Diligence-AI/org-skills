@@ -19,6 +19,8 @@ working style is the same on every project and client, and nobody has to keep it
 
 ### Delivery
 
+- **plan-before-code** — sets how to start an issue: root cause first, name the problem type,
+  agree the approach before writing code.
 - **task-execution** — guides when to build, plan, request a decision, or switch tasks.
 - **pull-request-workflow** — covers branches, PRs, self-review, QA, human review, and
   merge readiness.

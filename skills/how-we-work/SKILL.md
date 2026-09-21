@@ -41,6 +41,8 @@ Reach for a working mode before the delivery skills, not instead of them.
 
 ## Delivery
 
+- Starting an issue, before any code: read
+  [plan-before-code](../plan-before-code/SKILL.md).
 - Deciding whether to plan, build, ask for a decision, or move to other work: read
   [task-execution](../task-execution/SKILL.md).
 - Creating a branch or PR, reviewing, testing, marking ready, or merging: read
