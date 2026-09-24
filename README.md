@@ -21,7 +21,7 @@ working style is the same on every project and client, and nobody has to keep it
 
 - **plan-before-code** — sets how to start an issue: root cause first, name the problem type,
   agree the approach before writing code.
-- **task-execution** — guides when to build, plan, request a decision, or switch tasks.
+- **task-execution** — guides when to build, plan, request a decision, switch tasks, or delegate to Codex on a chosen model.
 - **pull-request-workflow** — covers branches, PRs, self-review, QA, human review, and
   merge readiness.
 - **external-code-review** — runs a fresh, read-only Claude review with the requested Opus
