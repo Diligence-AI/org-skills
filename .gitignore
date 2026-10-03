@@ -8,3 +8,9 @@ Thumbs.db
 .claude/settings.json
 
 # Keep the rest of .claude/ (shared commands, agents, skills, hooks) committable.
+
+# Running `npx skills add` inside this repo installs a local copy and replaces
+# skills/<name> with symlinks. This repo is the source; never commit an install.
+/.agents/
+/.claude/skills/
+/skills-lock.json
