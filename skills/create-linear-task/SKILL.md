@@ -46,6 +46,8 @@ description: >-
    for how to find the file, the three-step Linear upload, and the signed-header rules.
 9. Re-read each created issue. Confirm its project, title, description, priority, due date,
    relations, parent, and attachments against the source.
-10. Return each identifier and link. State the priority and due date you set and the words
+10. For a later comment, description edit, or status change on the issue, follow
+    `linear-workflow`.
+11. Return each identifier and link. State the priority and due date you set and the words
     you took them from. State any existing duplicate or blocker that affected the result.
     Do not claim facts that Linear does not show.
