@@ -3,8 +3,9 @@ name: linear-workflow
 description: >-
   Keeps existing Linear work accurate while it moves from Todo through active
   work, review, blockers, and completion, and sets how to write about Linear work
-  for a person. Use when starting or resuming a Linear issue, changing its status,
-  posting findings or blockers, choosing the next ready task, or writing a
+  for a person. Use before every comment, description edit, or status change on
+  an existing Linear issue, and when starting or resuming an issue, posting
+  findings or blockers, choosing the next ready task, or writing a
   summary, triage list, plan, or status update about Linear issues for a human
   reader. Do not use to create a new issue; use create-linear-task instead.
 ---
@@ -26,8 +27,13 @@ decision was made belongs in a repository document; a working note stops at the 
 ## Keep the issue current
 
 - A comment is a decision, a pointer, a supplied fact, or a blocker, in about four lines.
-  Never paste review findings, test counts, root-cause reports, plans, phase tables, or long
-  checklists into an issue: put them where the work is and link them.
+  Never paste review findings, test counts, root-cause reports, plans, phase tables, file
+  paths, option lists, or long checklists into an issue: put them where the work is and
+  link them.
+- Link each issue or pull request once. Linear expands every link into its full title, so a
+  repeated link makes a short comment long.
+- Comments post under the operator's account. Do not write as the operator, such as "my
+  earlier comment".
 - Write it once. Do not repost the same text later, and do not send one note to many issues.
 - Use chat tools only for short notifications, because issue history must stay easy to find.
 - Update status when the real work state changes. Do not rely on daily progress reports to
