@@ -27,7 +27,8 @@ working style is the same on every project and client, and nobody has to keep it
 - **external-code-review** — runs a fresh, read-only Claude review with the requested Opus
   or Fable model and waits for the paid review to finish.
 - **staging-browser-qa** — verifies a completed feature on its deployed staging commit
-  with agent-browser, captures review evidence, and prepares the human-QA handoff.
+  with agent-browser, captures clear, consistently named HD evidence, and prepares the
+  human-QA handoff.
 
 ### Client communication
 
