@@ -68,8 +68,13 @@ Clients and QA reviewers judge the work from this evidence, so make it easy to r
   1000`). Video records at about 10 frames per second, so fast steps are unreadable.
 - Take a full-page screenshot (`screenshot --full`) at each key state, and always at
   the point of a failure. Screenshots are what a reviewer looks at first.
-- For a bug fix, capture the corrected behavior at the place where the bug appeared.
-  Add a "before" capture only when the old behavior can still be shown safely.
+- **New feature: record a demo.** Walk the main flow end to end as a real user would,
+  at an even pace, with clean test data that looks real. A client sees the feature
+  through these videos, so do not show retries, dead ends, or debugging. Capture the
+  edge-case checks separately.
+- **Bug fix: run a QA check.** Capture the corrected behavior at the place where the
+  bug appeared, then the nearby cases that the fix could break. Add a "before" capture
+  only when the old behavior can still be shown safely.
 - Save files in `qa/<ISSUE-ID>/` and name them `<NN>-<flow>-<pass|fail>.<ext>`, such
   as `01-sign-in-pass.png` or `03-create-event-fail.webm`. The number keeps flow order
   and the status shows the result without opening the file.
